@@ -1,20 +1,4 @@
-## Commands
-
-1. yarn start
-2. yarn test
-3. yarn coverage | yarn coverage-html | yarn coverage-ci
-
-## TODO
-
-1. Validation
-2. API doc
-3. CI-CD
-4. Actual DB
-
-## APIDoc
-
-```javascript
-{
+export const APIDoc = {
   APIDoc: {
     "/": {
       GET: {
@@ -78,5 +62,4 @@
       },
     },
   },
-}
-```
+};
