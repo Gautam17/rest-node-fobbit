@@ -9,3 +9,4 @@ awscli-bundle/
 .vscode
 yarn.lock
 dump.rdb
+.nyc_output

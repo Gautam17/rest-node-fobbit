@@ -10,6 +10,6 @@ RUN yarn install
 RUN yarn build
 # COPY ./build /app/src
 
-EXPOSE 8080
+EXPOSE 8000
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "server" ]

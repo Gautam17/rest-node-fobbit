@@ -1,19 +1,4 @@
-# Versions
-
-- Node.js: v12.13.1
-- TypeScript: v4.x
-- yarn: v1.12.1
-
-## Commands
-
-1. yarn start
-2. yarn test
-3. yarn coverage | yarn coverage-html | yarn coverage-ci
-
-## APIDoc
-
-```javascript
-{
+export const APIDoc = {
   APIDoc: {
     "/": {
       GET: {
@@ -77,16 +62,4 @@
       },
     },
   },
-}
-```
-
-## TODO
-
-1. Validation
-2. API doc
-3. CI-CD
-4. Actual DB
-
-Author(s)
-
-- Gautam Vanani
+};

@@ -3,8 +3,10 @@
  */
 import { IncomingMessage, ServerResponse } from "http";
 import { UrlWithParsedQuery } from "url";
+import { APIDoc } from "../doc";
 import { send404 } from "../helper";
 import { createBook, deleteBooks, getBooks, updateBook } from "../service";
+import { send200 } from "./res.helper";
 /**
  * // all http get method goes here...
  * @param reqUrl
@@ -16,6 +18,8 @@ export function handleGetRequest(
 ) {
   if (reqUrl.pathname === "/book") {
     getBooks(reqUrl, res);
+  } else if (reqUrl.pathname === "/") {
+    send200(res, APIDoc);
   } else {
     send404(res);
   }
