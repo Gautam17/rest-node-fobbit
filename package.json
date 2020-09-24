@@ -1,0 +1,45 @@
+{
+    "name": "rest-node-fobbit",
+    "version": "1.0.0",
+    "description": "Sample CRUD APIs using node js (Foobit is book name!) without framework",
+    "main": "index.js",
+    "scripts": {
+        "server": "node build/server.js",
+        "start": "tsc-watch --outDir ./build --onSuccess \"npm run server -- --mode=http\" --onFailure \"echo ERROR! Compilation Failed\"",
+        "build": "tsc",
+        "clean": "npx rimraf ./build",
+        "test": " mocha -r ts-node/register test/**/*.ts",
+        "coverage": "nyc --reporter=text yarn test",
+        "coverage-html": "nyc --reporter=html yarn test",
+        "coverage-ci": "nyc --check-coverage --lines 80 yarn test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Gautam17/rest-node-fobbit.git"
+    },
+    "author": "Gomzy <gautamvanani5@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Gautam17/rest-node-fobbit/issues"
+    },
+    "homepage": "https://github.com/Gautam17/rest-node-fobbit#readme",
+    "devDependencies": {
+        "@types/chai": "^4.2.12",
+        "@types/lodash": "^4.14.161",
+        "@types/mocha": "^8.0.3",
+        "@types/node": "^14.10.1",
+        "@types/yup": "^0.29.7",
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0",
+        "ts-node": "^9.0.0",
+        "tsc-watch": "^4.2.9",
+        "tslint": "^6.1.3",
+        "typescript": "^4.0.2"
+    },
+    "dependencies": {
+        "lodash": "^4.17.20",
+        "yup": "^0.29.3"
+    }
+}
